@@ -12,6 +12,9 @@
 
   "categories": ["Other"],
   "main": "./out/extension.js",
+  "activationEvents": [
+    "onCommand:fileFromClipboard.create"
+  ],
 
   "contributes": {
     "commands": [
