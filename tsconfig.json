@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    /* Compile for Node 16 runtime used by VS Code */
+    "target": "ES2022",
+    "module": "commonjs",
+    "lib": ["ES2022"],
+
+    /* Paths */
+    "rootDir": "src",
+    "outDir": "out",
+    "sourceMap": true,
+
+    /* Strictness */
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Resolution */
+    "moduleResolution": "node",
+    "types": ["node", "vscode"]
+  },
+
+  "include": ["src"],
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.spec.ts"]
+}

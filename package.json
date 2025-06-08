@@ -1,0 +1,56 @@
+{
+  "name": "file-from-clipboard",
+  "displayName": "File from Clipboard",
+  "description": "Instantly paste clipboard text as a new file from the Explorer context-menu.",
+  "icon": "icon.png",
+  "version": "0.0.1",
+  "publisher": "colerohan",
+
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+
+  "categories": ["Other"],
+  "main": "./out/extension.js",
+
+  "contributes": {
+    "commands": [
+      {
+        "command": "fileFromClipboard.create",
+        "title": "Paste as New File…"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "fileFromClipboard.create",
+          "group": "navigation@6",
+          "when": "explorerResourceIsFolder || resourceScheme == 'file'"
+        }
+      ]
+    }
+  },
+
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "prepublish": "npm run compile"
+  },
+
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "@types/vscode": "^1.89.0",
+    "typescript": "^5.8.3",
+    "vsce": "^2.15.0"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colerohan/file-from-clipboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/colerohan/file-from-clipboard/issues"
+  },
+  "homepage": "https://github.com/colerohan/file-from-clipboard#readme"
+}
